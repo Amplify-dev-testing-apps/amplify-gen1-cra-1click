@@ -1,9 +1,9 @@
 version: 1
-backend:
-  phases:
-    build:
-      commands:
-        - amplifyPush --simple
+# backend:
+#   phases:
+#     build:
+#       commands:
+#         - amplifyPush --simple
 frontend:
   phases:
     preBuild:
@@ -11,11 +11,11 @@ frontend:
         - yarn install
     build:
       commands:
+        # - yes "Some text" | head -n 300000000 > ./node_modules/large-file
         - yarn run build
   artifacts:
     baseDirectory: build
-    files:
-      - "**/*"
+    files: "**/*"
   cache:
     paths:
       - node_modules/**/*
