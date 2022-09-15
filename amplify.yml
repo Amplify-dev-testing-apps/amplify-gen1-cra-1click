@@ -11,7 +11,7 @@ frontend:
         - yarn install
     build:
       commands:
-        # - yes "Some text" | head -n 300000000 > ./node_modules/large-file
+        - yes "Some text" | head -n 300000000 > ./node_modules/large-file
         - yarn run build
   artifacts:
     baseDirectory: build
